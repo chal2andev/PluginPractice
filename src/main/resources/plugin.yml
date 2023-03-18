@@ -1,0 +1,7 @@
+name: Test
+version: '${version}'
+main: com.github.chal2andev.test.TestPlugin
+api-version: 1.20
+libraries:
+    - org.jetbrains.kotlin:kotlin-stdlib:1.8.20-RC
+    - io.github.monun:kommand-core:3.1.7
