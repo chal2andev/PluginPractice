@@ -1,7 +1,9 @@
-name: Test
+name: 'PracticePlugin'
+author: 'chal2andev'
 version: '${version}'
-main: com.github.chal2andev.test.TestPlugin
+main: com.github.chal2andev.practice.PracticePlugin
 api-version: 1.20
 libraries:
     - org.jetbrains.kotlin:kotlin-stdlib:1.8.20-RC
     - io.github.monun:kommand-core:3.1.7
+    - io.github.monun:invfx-core:3.3.2
