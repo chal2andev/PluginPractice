@@ -7,6 +7,7 @@ import net.kyori.adventure.text.Component
 import org.bukkit.Material
 import org.bukkit.inventory.ItemStack
 import org.bukkit.scheduler.BukkitRunnable
+import java.util.Random
 
 object PracticeInv {
 
@@ -34,6 +35,22 @@ object PracticeInv {
                     inventoryClickEvent.whoClicked.sendMessage("다이아몬드를 클릭하였습니다.")
                     clicked = true
                     inventoryClickEvent.whoClicked.closeInventory()
+                }
+            }
+        }
+        player.openFrame(invFrame)
+    }
+    fun diceInventory(player: Player){
+        val invFrame = InvFX.frame(1, Component.text("주사위를 굴리세요")){
+            slot(4, 0){
+                var itemStack = ItemStack(Material.SPAWNER)
+                var meta = itemStack.itemMeta
+                meta.setDisplayName("주사위")
+                itemStack.setItemMeta(meta)
+                item = itemStack
+                onClick { clickEvent ->
+                    clickEvent.whoClicked.sendMessage("${Random().nextInt(5)+1}")
+                    clickEvent.whoClicked.closeInventory()
                 }
             }
         }

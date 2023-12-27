@@ -10,9 +10,14 @@ class PracticePlugin: JavaPlugin() {
     private fun initModule(){
         PracticeKommand.initModule(this)
         PracticeInv.initModule(this)
+        PracticeListener().initModule(this)
+        registerEvents()
         setupCommands()
     }
     private fun setupCommands(){
         PracticeKommand.register()
+    }
+    private fun registerEvents(){
+        server.pluginManager.registerEvents(PracticeListener(), this)
     }
 }
