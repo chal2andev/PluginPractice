@@ -19,22 +19,13 @@ class TestPlugin: JavaPlugin(), Listener{
 
     private fun registerKommand(){
         kommand {
-<<<<<<< HEAD
-            register("앙기모찌"){
-                requires { isOp }
-
-                executes {
-                    sender.sendMessage("서준 멍청이")
-=======
             register("sample"){
                 requires { isOp }
 
                 executes {
                     sender.sendMessage("kotlin, kommand plugin is enable")
->>>>>>> f207352 (kotlin plugin Sample setup)
                 }
             }
         }
     }
-
 }
